@@ -20,3 +20,4 @@ export const loginUser = ({email, password }) => {
     firebase.auth().signInAndRetrieveDataWithEmailAndPassword(email, password)
         .then(user => console.log(user));
 };
+//oioi
