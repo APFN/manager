@@ -11,12 +11,12 @@ const RouterComponent = () => {
                     key="login" 
                     component={LoginForm} 
                     title="Please Login"
+                    initial
                 /> 
                 <Scene 
                     key="employeeList" 
                     component={EmployeeList} 
                     title="Employees"
-                    initial
                 />                
             </Scene>
         </Router>
@@ -25,4 +25,3 @@ const RouterComponent = () => {
 };
 
 export default RouterComponent;
-//oioi?çdnfuoçewhbfuo
