@@ -13,12 +13,12 @@ const RouterComponent = () => {
                         key="login" 
                         component={LoginForm} 
                         title="Please Login"
-                        initial
                         stitleStyle={styles.navigationBarTitleStyle}
                     /> 
                 </Scene> 
-                <Scene key= "main">
+                <Scene key= "main" initial >
                     <Scene 
+                        
                         rightTitle = "Add new employee"
                         onRight={() => Actions.employeeCreate()}
                         key="employeeList" 
