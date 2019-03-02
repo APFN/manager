@@ -16,7 +16,7 @@ const RouterComponent = () => {
                         stitleStyle={styles.navigationBarTitleStyle}
                     /> 
                 </Scene> 
-                <Scene key= "main" initial >
+                <Scene key= "main"  >
                     <Scene 
                         
                         rightTitle = "Add new employee"
