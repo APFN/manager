@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 import {View, Text, Picker } from 'react-native';
 import {CardSection, Card, Button } from './common';
 import { connect } from 'react-redux';
-import { employeeUpdate} from '../actions';
+import { employeeUpdate, employeeSave} from '../actions';
 import EmployeeForm from  './EmployeeForm';
 
 class EmployeeEdit extends Component{
@@ -16,6 +16,7 @@ class EmployeeEdit extends Component{
   }
   onButtonPress(){
     const { name, phone, shift } = this.props;
+    this.props.employeeSave({name, phone, shift, uid: this.  props.employee.uid})
   }
 
     render(){
@@ -41,4 +42,7 @@ const mapStateToProps = (state) => {
     return { name, phone, shift };
   }
   
-  export default connect( mapStateToProps, { employeeUpdate })(EmployeeEdit);
+  export default connect( mapStateToProps, { 
+      employeeUpdate,
+      employeeSave
+    })(EmployeeEdit);
